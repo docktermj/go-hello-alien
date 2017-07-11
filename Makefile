@@ -2,9 +2,6 @@
 
 # PROGRAM_NAME is the name of the GIT repository.
 PROGRAM_NAME := $(shell basename `git rev-parse --show-toplevel`)
-TARGET_DIRECTORY := ./target
-DOCKER_CONTAINER_NAME := $(PROGRAM_NAME)
-DOCKER_IMAGE_NAME := local/$(PROGRAM_NAME)
 BUILD_VERSION := $(shell git describe --always --tags --abbrev=0 --dirty)
 BUILD_TAG := $(shell git describe --always --tags --abbrev=0)
 BUILD_ITERATION := $(shell git log $(BUILD_TAG)..HEAD --oneline | wc -l)
@@ -35,12 +32,6 @@ test:
 .PHONY: dependencies
 dependencies:
 	go get -u github.com/gernest/alien
-
-
-.PHONY: clean
-clean:
-	docker rm --force $(DOCKER_CONTAINER_NAME) || true
-	rm -rf $(TARGET_DIRECTORY)
 
 
 .PHONY: help

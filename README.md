@@ -51,4 +51,3 @@ make
 ```
 
 The results will be in the `${GOPATH}/bin` directory.
-
