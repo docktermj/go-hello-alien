@@ -20,6 +20,7 @@ func main() {
 	// Streaming.
 
 	m.Get("/streaming", func(w http.ResponseWriter, r *http.Request) {
+		// Observation: This buffers into large chunks before sending.
 
 		// Need to cast http.ResponseWriter as a "flusher".
 
