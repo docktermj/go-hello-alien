@@ -35,7 +35,7 @@ git clone git@github.com:docktermj/go-hello-alien.git
 #### Download dependencies
 
 ```console
-cd ${PROJECT_DIR}/mock-server
+cd ${PROJECT_DIR}/go-hello-alien
 make dependencies
 ```
 
