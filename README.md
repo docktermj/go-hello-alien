@@ -8,11 +8,22 @@ Part of a comparision of [Go HTTP routers](https://github.com/avelino/awesome-go
 
 ### Invocation
 
+#### Server
+
 ```console
 go-hello-alien
 ```
+#### Client
 
-In a web browser, visit http://localhost:8090/
+In a web browser:
+
+1. Visit http://localhost:8090/ for "Hello world"
+
+`curl` commands
+
+```console
+curl -v -X GET http://localhost:8090/streaming
+```
 
 ## Development
 
