@@ -12,6 +12,8 @@ Part of a comparision of [Go HTTP routers](https://github.com/avelino/awesome-go
 go-hello-alien
 ```
 
+In a web browser, visit http://localhost:8090/
+
 ## Development
 
 ### Dependencies
